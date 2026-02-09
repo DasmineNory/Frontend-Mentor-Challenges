@@ -1,0 +1,112 @@
+/* ============= FONT IMPORTS ============= */
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/static/Inter-Regular.ttf) format("ttf");
+}
+
+/* ============= GLOBAL RESET ============= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+/* ============= BODY & LAYOUT ============= */
+body {
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ============= PROFILE CARD CONTAINER ============= */
+.container {
+  background-color: hsl(0, 0%, 12%);
+  max-width: 400px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 10px;
+}
+
+/* ============= PROFILE IMAGE ============= */
+.container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+}
+
+/* ============= PROFILE INFO ============= */
+.container h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.container h1 span {
+  color: hsl(75, 94%, 57%);
+  display: block;
+  font-size: 1rem;
+  margin: 0.5rem 1rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.container p {
+  color: #fff;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ============= SOCIAL LINKS ============= */
+.container ul {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.container ul li a {
+  background-color: hsl(0, 0%, 18%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.container ul li a:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+}
+
+/* ============= FOOTER ============= */
+.attribution {
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ============= MEDIA QUERIES ============= */
+@media (max-width: 450px) {
+  body {
+    padding: 1.5rem;
+  }
+}
