@@ -1,112 +1,53 @@
-/* ============= FONT IMPORTS ============= */
-@font-face {
-  font-family: Inter;
-  src: url(./assets/fonts/static/Inter-Regular.ttf) format("ttf");
-}
+<!doctype html>
+<html lang="en">
+  <!-- ============= HEAD SECTION ============= -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-/* ============= GLOBAL RESET ============= */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Inter;
-}
+    <title>Frontend Mentor | Social links profile</title>
+  </head>
 
-/* ============= BODY & LAYOUT ============= */
-body {
-  background-color: hsl(0, 0%, 8%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  flex-direction: column;
-}
+  <body>
+    <!-- ============= PROFILE CARD CONTAINER ============= -->
+    <div class="container">
+      <img
+        src="./assets/images/avatar-jessica.jpeg"
+        alt="Jessica Profile-image"
+      />
+      <h1 class="name">Jessica Randall</h1>
+      <p class="location">London, United Kingdom</p>
+      <p class="bio">"Front-end developer and avid reader."</p>
 
-ul {
-  list-style-type: none;
-}
+      <!-- ============= SOCIAL LINKS ============= -->
+      <ul>
+        <li>
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </li>
+        <li><a href="#">Frontend Mentor</a></li>
+        <li>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
 
-/* ============= PROFILE CARD CONTAINER ============= */
-.container {
-  background-color: hsl(0, 0%, 12%);
-  max-width: 400px;
-  width: 100%;
-  padding: 24px;
-  border-radius: 10px;
-}
-
-/* ============= PROFILE IMAGE ============= */
-.container img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: block;
-  margin-inline: auto;
-  margin-bottom: 1.25rem;
-}
-
-/* ============= PROFILE INFO ============= */
-.container .name {
-  font-size: 1.5rem;
-  color: #fff;
-  text-align: center;
-}
-
-.container .location {
-  color: hsl(75, 94%, 57%);
-  text-align: center;
-  font-size: 1rem;
-  margin: 0.5rem 1rem 1rem;
-  margin-top: 0.5rem;
-}
-
-.container .bio {
-  color: #fff;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-/* ============= SOCIAL LINKS ============= */
-.container ul {
-  display: grid;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
-
-.container ul li a {
-  background-color: hsl(0, 0%, 18%);
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  width: 100%;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.15s ease-in-out;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-}
-
-.container ul li a:hover {
-  background-color: hsl(75, 94%, 57%);
-  color: hsl(0, 0%, 8%);
-}
-
-/* ============= FOOTER ============= */
-.attribution {
-  font-size: 13px;
-  color: #fff;
-  text-align: center;
-  margin-top: 1rem;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
-/* ============= MEDIA QUERIES ============= */
-@media (max-width: 450px) {
-  body {
-    padding: 1.5rem;
-  }
-}
+    <!-- ============= FOOTER ============= -->
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Osundosumu Temiloluwa Ololade </a>.
+    </div>
+  </body>
+</html>
