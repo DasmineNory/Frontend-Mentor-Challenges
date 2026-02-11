@@ -1,0 +1,201 @@
+/* ============= VARIABLES & FONTS ============= */
+
+@font-face {
+  font-family: "Young Serif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+}
+
+:root {
+  --color-text-highlight: hsl(14, 45%, 36%);
+  --color-text-accent: hsl(332, 51%, 32%);
+
+  --color-card-background: hsl(0, 0%, 100%);
+  --color-background-soft: hsl(330, 100%, 98%);
+  --color-app-background: hsl(30, 54%, 90%);
+  --color-border-main: hsl(30, 18%, 87%);
+  --color-text-secondary: hsl(30, 10%, 34%);
+  --color-text-primary: hsl(24, 5%, 18%);
+
+  --font-primary: "Outfit", sans-serif;
+  --font-display: "Young Serif", serif;
+
+  --text-base: 1rem;
+  --text-heading-lg: 1.75rem;
+
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}
+
+/* ============= GLOBAL RESET ============= */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  background: var(--color-app-background);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  font-style: italic;
+  color: var(--color-text-accent);
+}
+
+ul,
+ol {
+  padding: 0 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* ============= TYPOGRAPHY ============= */
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-family: var(--font-display);
+  font-size: var(--text-heading-lg);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-highlight);
+  margin-bottom: 1.75rem;
+}
+
+.dish-title {
+  font-size: 2.45rem;
+  color: var(--color-text-primary);
+}
+
+.prep-header {
+  font-size: 1.27rem;
+  color: var(--color-text-accent);
+  font-weight: var(--weight-semibold);
+  margin-bottom: 0.75rem;
+}
+
+span {
+  font-weight: var(--weight-bold);
+}
+
+li {
+  padding-left: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+li::marker {
+  color: var(--color-text-highlight);
+  font-weight: var(--weight-semibold);
+}
+
+[data-cell="nutrient-value"] {
+  color: var(--color-text-highlight);
+  font-weight: var(--weight-semibold);
+}
+
+.page-footer {
+  font-size: 11px;
+  text-align: center;
+}
+
+.page-footer a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ============= LAYOUT ============= */
+
+.app-container {
+  display: grid;
+  place-items: center;
+}
+
+.content-card {
+  max-width: 45em;
+  background: var(--color-card-background);
+  margin: 5.5rem 0rem;
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+}
+
+section {
+  margin-top: 1.75rem;
+}
+
+hr {
+  outline: none;
+  border: none;
+  height: 1px;
+  background-color: var(--color-border-main);
+  margin-top: 1.75rem;
+}
+
+/* ============= COMPONENTS ============= */
+
+.hero-image {
+  border-radius: 0.75rem;
+  margin-bottom: 2.4rem;
+}
+
+.prep-info-box {
+  padding: 1.75rem;
+  background: var(--color-app-background);
+  margin-top: 1.8rem;
+  border-radius: 0.8rem;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid var(--color-border-main);
+  padding: 1rem;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+/* ============= MEDIA QUERIES ============= */
+
+@media (max-width: 500px) {
+  .content-card {
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .hero-image {
+    border-radius: 0;
+  }
+
+  .main-content {
+    padding: 0 1.75rem;
+  }
+
+  .dish-title {
+    font-size: 2.3rem;
+  }
+}
